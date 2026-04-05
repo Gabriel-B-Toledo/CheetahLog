@@ -1,6 +1,9 @@
 # CheetahLog
 Sistema para agendamento de entregas de cargas, permitindo o controle de rotas, horários e motoristas para otimização das entregas.
 
+# Protótipo no Figma:
+[Clique aqui para visualizar](https://www.figma.com/proto/fZbgz3HonBcWK2E3VyDwgS/CheetahLog?node-id=5-6&t=N5XC7H7PlXbd3d9Y-1)
+
 # Backlog do Produto Priorizado: CheetahLog
 
 ## 📦 Sprint 1: Entrega 01 - Planejamento e Design

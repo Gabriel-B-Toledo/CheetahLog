@@ -4,6 +4,35 @@ Sistema para agendamento de entregas de cargas, permitindo o controle de rotas, 
 # Protótipo no Figma:
 [Clique aqui para visualizar](https://www.figma.com/proto/fZbgz3HonBcWK2E3VyDwgS/CheetahLog?node-id=5-6&t=N5XC7H7PlXbd3d9Y-1)
 
+# Como executar
+
+```bash
+npm install              # dependências do front-end
+npm --prefix server install   # dependências da API
+npm run dev              # sobe o front (Vite) e a API juntos
+```
+
+## Banco de dados (MySQL)
+
+A API (`server/`) usa **MySQL** para as operações `GET`, `POST`, `PUT` e `DELETE`.
+Na primeira execução o banco `cheetahlog` e as tabelas (`rotas`, `motoristas`,
+`entregas`) são criados e populados automaticamente com dados de exemplo.
+
+Configure o acesso por variáveis de ambiente (valores padrão entre parênteses):
+
+| Variável | Padrão | Descrição |
+| :-- | :-- | :-- |
+| `DB_HOST` | `127.0.0.1` | Host do MySQL |
+| `DB_PORT` | `3306` | Porta |
+| `DB_USER` | `root` | Usuário |
+| `DB_PASSWORD` | *(vazio)* | Senha |
+| `DB_NAME` | `cheetahlog` | Nome do banco |
+
+> **Fallback automático:** se o MySQL não estiver acessível, a API cai
+> automaticamente para um **mock em JSON** (`server/data.json`), de modo que o
+> sistema continua funcionando para demonstração. O endpoint `GET /api/health`
+> informa qual camada está ativa (`{"storage":"mysql"}` ou `{"storage":"mock"}`).
+
 # Backlog do Produto Priorizado: CheetahLog
 
 ## 📦 Sprint 1: Entrega 01 - Planejamento e Design
